@@ -1,0 +1,2553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ImpressaoDanfePaisagemA4Report" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="782" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="cafcd0c4-a982-47af-8b78-a9fe60485e49">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="288"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NFe com dup Data Adapter "/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="danfe_xml_03_paisagem_Sub_Item" class="java.io.InputStream" isForPrompting="false">
+		<defaultValueExpression><![CDATA["danfe_xml_03_paisagem_Sub_Item.jasper"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Frente" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["1"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="msgVersaoTeste" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="PreImpresso" class="java.lang.Boolean" isForPrompting="false">
+		<defaultValueExpression><![CDATA[Boolean.FALSE]]></defaultValueExpression>
+	</parameter>
+	<parameter name="msgPrevisualizacao" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<queryString language="xPath">
+		<![CDATA[//NFe]]>
+	</queryString>
+	<field name="numeroNfe" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/ide/nNF]]></fieldDescription>
+	</field>
+	<field name="serieNfe" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/ide/serie]]></fieldDescription>
+	</field>
+	<field name="saidaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/ide/tpNF]]></fieldDescription>
+	</field>
+	<field name="naturezaOperacao" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/ide/natOp]]></fieldDescription>
+	</field>
+	<field name="chaveAcesso" class="java.lang.String">
+		<fieldDescription><![CDATA[../protNFe/infProt/chNFe]]></fieldDescription>
+	</field>
+	<field name="dataEmissao" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/ide/dhEmi]]></fieldDescription>
+	</field>
+	<field name="dataSaidaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/ide/dhSaiEnt]]></fieldDescription>
+	</field>
+	<field name="horaSaida" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/ide/dhSaiEnt]]></fieldDescription>
+	</field>
+	<field name="emitenteRazaoSocial" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/xNome]]></fieldDescription>
+	</field>
+	<field name="emitenteEndereco" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/enderEmit/xLgr]]></fieldDescription>
+	</field>
+	<field name="emitenteBairro" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/enderEmit/xBairro]]></fieldDescription>
+	</field>
+	<field name="emitenteMunicipio" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/enderEmit/xMun]]></fieldDescription>
+	</field>
+	<field name="emitenteUf" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/enderEmit/UF]]></fieldDescription>
+	</field>
+	<field name="emitenteInscricaoEstadual" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/IE]]></fieldDescription>
+	</field>
+	<field name="emitenteInscricaoEstadualSubtributario" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/IEST]]></fieldDescription>
+	</field>
+	<field name="emitenteCnpj" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/CNPJ]]></fieldDescription>
+	</field>
+	<field name="emitenteCep" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/enderEmit/CEP]]></fieldDescription>
+	</field>
+	<field name="emitenteTelefone" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/enderEmit/fone]]></fieldDescription>
+	</field>
+	<field name="destinatarioRazaoSocial" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/xNome]]></fieldDescription>
+	</field>
+	<field name="destinatarioCnpj" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/CNPJ]]></fieldDescription>
+	</field>
+	<field name="destinatarioEndereco" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/enderDest/xLgr]]></fieldDescription>
+	</field>
+	<field name="destinatarioCompl" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/enderDest/xCpl]]></fieldDescription>
+	</field>
+	<field name="destinatarioBairro" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/enderDest/xBairro]]></fieldDescription>
+	</field>
+	<field name="destinatarioCep" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/enderDest/CEP]]></fieldDescription>
+	</field>
+	<field name="destinatarioMunicipio" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/enderDest/xMun]]></fieldDescription>
+	</field>
+	<field name="destinatarioFoneFax" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/enderDest/fone]]></fieldDescription>
+	</field>
+	<field name="destinatarioUf" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/enderDest/UF]]></fieldDescription>
+	</field>
+	<field name="destinatarioInscricaoEstadual" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/IE]]></fieldDescription>
+	</field>
+	<field name="fatura" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/infAdic/obsCont[@xCampo='billnote']/xTexto]]></fieldDescription>
+	</field>
+	<field name="baseIcms" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ICMSTot/vBC]]></fieldDescription>
+	</field>
+	<field name="valorIcms" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ICMSTot/vICMS]]></fieldDescription>
+	</field>
+	<field name="baseIcmsSubstituicao" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ICMSTot/vBCST]]></fieldDescription>
+	</field>
+	<field name="valorIcmsSubstituicao" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ICMSTot/vST]]></fieldDescription>
+	</field>
+	<field name="valorTotalProduto" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ICMSTot/vProd]]></fieldDescription>
+	</field>
+	<field name="valorFrete" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ICMSTot/vFrete]]></fieldDescription>
+	</field>
+	<field name="valorSeguro" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ICMSTot/vSeg]]></fieldDescription>
+	</field>
+	<field name="desconto" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ICMSTot/vDesc]]></fieldDescription>
+	</field>
+	<field name="outrasDespesas" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ICMSTot/vOutro]]></fieldDescription>
+	</field>
+	<field name="valorIpi" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ICMSTot/vIPI]]></fieldDescription>
+	</field>
+	<field name="valorTotalNota" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ICMSTot/vNF]]></fieldDescription>
+	</field>
+	<field name="transportadorRazaoSocial" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/transporta/xNome]]></fieldDescription>
+	</field>
+	<field name="transportadorFretePorConta" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/modFrete]]></fieldDescription>
+	</field>
+	<field name="transportadorCodigoAntt" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/veicTransp/RNTC]]></fieldDescription>
+	</field>
+	<field name="transportadorPlacaVeiculo" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/veicTransp/placa]]></fieldDescription>
+	</field>
+	<field name="transportadorUfVeiculo" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/veicTransp/UF]]></fieldDescription>
+	</field>
+	<field name="transportadorCnpj" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/transporta/CNPJ]]></fieldDescription>
+	</field>
+	<field name="transportadorEndereço" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/transporta/xEnder]]></fieldDescription>
+	</field>
+	<field name="transportadorMunicipio" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/transporta/xMun]]></fieldDescription>
+	</field>
+	<field name="transportadorUf" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/transporta/UF]]></fieldDescription>
+	</field>
+	<field name="transportadorInscricaoEstadual" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/transporta/IE]]></fieldDescription>
+	</field>
+	<field name="transportadorQuantidade" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/vol[*]/qVol]]></fieldDescription>
+	</field>
+	<field name="transportadorEspecie" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/vol[*]/esp]]></fieldDescription>
+	</field>
+	<field name="transportadorMarca" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/vol[*]/marca]]></fieldDescription>
+	</field>
+	<field name="transportadorNumeracao" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/vol[*]/nVol]]></fieldDescription>
+	</field>
+	<field name="transportadorPesoBruto" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/vol[*]/pesoB]]></fieldDescription>
+	</field>
+	<field name="transportadorPesoLiquido" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/vol[*]/pesoL]]></fieldDescription>
+	</field>
+	<field name="inscricaoMunicipal" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/IM]]></fieldDescription>
+	</field>
+	<field name="valorTotalServicos" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ISSQNtot/vServ]]></fieldDescription>
+	</field>
+	<field name="baseIssqn" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ISSQNtot/vBC]]></fieldDescription>
+	</field>
+	<field name="valorIssqn" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/total/ISSQNtot/vISS]]></fieldDescription>
+	</field>
+	<field name="informacoesComplementares" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/infAdic/infAdFisco]]></fieldDescription>
+	</field>
+	<field name="codigoBarras" class="java.awt.Image"/>
+	<field name="emitenteLotoTipo" class="java.awt.Image"/>
+	<field name="tipoEmissao" class="java.lang.String">
+		<fieldDescription><![CDATA["1"]]></fieldDescription>
+	</field>
+	<field name="informacoesComplementares2" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/infAdic/infCpl]]></fieldDescription>
+	</field>
+	<field name="dadosNfe" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/det]]></fieldDescription>
+	</field>
+	<field name="codigoBarrasContingencia" class="java.awt.Image"/>
+	<field name="dadosNfeCodigoBarras" class="java.lang.String"/>
+	<field name="protocoloDataAutorizacao" class="java.lang.String">
+		<fieldDescription><![CDATA[../protNFe/infProt/nProt]]></fieldDescription>
+	</field>
+	<field name="codigoTipoEmissao" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/ide/tpEmis]]></fieldDescription>
+	</field>
+	<field name="numeroRegistroDPEC" class="java.lang.String"/>
+	<field name="dataRegistroDPEC" class="java.lang.String"/>
+	<field name="situacao" class="java.lang.String">
+		<fieldDescription><![CDATA[../protNFe/infProt/cStat]]></fieldDescription>
+	</field>
+	<field name="msgAutenticidade" class="java.lang.String"/>
+	<field name="dhRecbto" class="java.lang.String">
+		<fieldDescription><![CDATA[../protNFe/infProt/dhRecbto]]></fieldDescription>
+	</field>
+	<field name="emitenteEnderecoNro" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/emit/enderEmit/nro]]></fieldDescription>
+	</field>
+	<field name="destinatarioEnderecoNro" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/enderDest/nro]]></fieldDescription>
+	</field>
+	<field name="destinatarioCpf" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/dest/CPF]]></fieldDescription>
+	</field>
+	<field name="transportadorCpf" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/transp/transporta/CPF]]></fieldDescription>
+	</field>
+	<field name="TipoNF" class="java.lang.String">
+		<fieldDescription><![CDATA[infNFe/ide/tpNF]]></fieldDescription>
+	</field>
+	<variable name="InfCompl" class="java.lang.String">
+		<variableExpression><![CDATA[($F{informacoesComplementares} == null ? "" : $F{informacoesComplementares} + "\n") +
+($F{informacoesComplementares2} == null ? "" : $F{informacoesComplementares2})]]></variableExpression>
+		<initialValueExpression><![CDATA[($F{informacoesComplementares} == null ? "" : $F{informacoesComplementares} + "\n") +
+($F{informacoesComplementares2} == null ? "" : $F{informacoesComplementares2})]]></initialValueExpression>
+	</variable>
+	<group name="Grupo01" isStartNewPage="true" isResetPageNumber="true" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{numeroNfe}]]></groupExpression>
+		<groupHeader>
+			<band height="113" splitType="Stretch">
+				<printWhenExpression><![CDATA[Boolean.valueOf(($P{Frente}.equals("1")) || ($V{PAGE_NUMBER}.intValue() % 2 !=0))]]></printWhenExpression>
+				<rectangle radius="1">
+					<reportElement key="rectangle-1" mode="Opaque" x="70" y="93" width="288" height="20" backcolor="#DEDEDE" uuid="ed35b88b-ff65-4098-be8d-b9fcc2b4d043">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="394" y="1" width="94" height="15" uuid="7995a5c8-bd18-4c9f-9626-532a1e007c27">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DANFE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-2" mode="Transparent" x="394" y="14" width="94" height="23" uuid="24e3517d-b0cb-4820-aab2-da2613268129">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[Documento Auxiliar da Nota Fiscal Eletrônica]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-3" mode="Transparent" x="394" y="50" width="50" height="11" uuid="e7aef183-88b8-4144-a4f5-9644aed5f0e9">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[1 - Saída]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-4" mode="Transparent" x="394" y="39" width="50" height="11" uuid="6b96ae28-7fd5-465e-9d0f-4e9be3691ed2">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[0 - Entrada]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-3" mode="Transparent" x="452" y="37" width="27" height="25" uuid="91f9637a-4c49-40a2-b4c6-d7f76f8b2e3b">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-2" mode="Transparent" x="370" y="70" width="143" height="15" uuid="a7f06291-6d2f-4912-9615-5bb733d840a9"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Nº" + $F{numeroNfe}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-3" mode="Transparent" x="370" y="84" width="143" height="12" uuid="56f37b6a-9e6c-4f91-bba7-3f9122a42dd0"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Série: " + $F{serieNfe}]]></textFieldExpression>
+				</textField>
+				<rectangle radius="1">
+					<reportElement key="rectangle-4" mode="Transparent" x="525" y="0" width="256" height="113" uuid="52613468-41fc-47da-9118-66ea1e4bb82a">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-5" mode="Transparent" x="529" y="2" width="96" height="8" uuid="13e3bb3c-d20c-4fe9-bf32-ab1cb7dcc331">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="5" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[CONTROLE DO FISCO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-6" mode="Transparent" x="74" y="95" width="96" height="8" uuid="e2d96a11-e8f4-45cc-b3d8-8a9ea3d30c23">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[NATUREZA DA OPERAÇÃO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-5" mode="Transparent" x="456" y="40" width="20" height="20" uuid="45a405d5-17a8-4791-a266-23508469d6de"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{saidaEntrada}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-65" mode="Transparent" x="74" y="101" width="283" height="12" uuid="2e6b85be-538f-4c81-ad91-e30a74ba49b4"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{naturezaOperacao}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement key="textField-67" stretchType="RelativeToTallestObject" mode="Transparent" x="370" y="95" width="80" height="12" uuid="9a70c17e-6d96-478f-a0e9-29f3ac0d92c4"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" evaluationTime="Group" evaluationGroup="Grupo01" pattern="" isBlankWhenNull="true">
+					<reportElement key="textField-68" stretchType="RelativeToTallestObject" mode="Transparent" x="450" y="95" width="63" height="12" uuid="5085f591-df07-49fa-8bbf-59cef9cfe4e9"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<rectangle radius="1">
+					<reportElement key="rectangle-8" mode="Transparent" x="525" y="52" width="256" height="20" uuid="15d4014f-d5da-45b3-8455-9f9b9ddb39ab">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-10" mode="Transparent" x="534" y="54" width="242" height="8" uuid="3e1d9c7e-91d0-4d0b-a5bb-3a8a491aa2ca">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[CHAVE DE ACESSO DA NF-e - CONSULTA NO SITE: WWW.NFE.FAZENDA.GOV.BR]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-14" mode="Transparent" x="534" y="61" width="230" height="10" uuid="9b942158-213d-46b7-ba60-660cebb7bf4c"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{chaveAcesso} != null? $F{chaveAcesso}.substring(0,4) + " " + $F{chaveAcesso}.substring(4,8) + " " + $F{chaveAcesso}.substring(8,12) + " " +
+$F{chaveAcesso}.substring(12,16) + " " + $F{chaveAcesso}.substring(16,20) + " " + $F{chaveAcesso}.substring(20,24) + " " +
+$F{chaveAcesso}.substring(24,28) + " " + $F{chaveAcesso}.substring(28,32) + " " + $F{chaveAcesso}.substring(32,36) + " " +
+$F{chaveAcesso}.substring(36,40) + " " + $F{chaveAcesso}.substring(40,44) + " " : "" )]]></textFieldExpression>
+				</textField>
+				<image hAlign="Center" vAlign="Top">
+					<reportElement key="image-3" mode="Opaque" x="530" y="74" width="245" height="37" uuid="21b501bf-547e-4c0a-951e-aeccc156400e"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<imageExpression><![CDATA[$F{codigoBarrasContingencia}]]></imageExpression>
+				</image>
+				<rectangle radius="1">
+					<reportElement key="rectangle-61" mode="Transparent" x="70" y="1" width="288" height="92" uuid="edd69bb1-81a9-4ff6-a508-11b6a2f6996e">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement key="textField-72" mode="Transparent" x="145" y="40" width="210" height="52" uuid="d2b85086-8e6e-4f5d-9d2d-fdd11fe68c75"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{emitenteEndereco}  + ( $F{emitenteEnderecoNro} == null ? "" : ", " + $F{emitenteEnderecoNro} ) + " - " + $F{emitenteBairro} +", " + $F{emitenteMunicipio} +
+", " + $F{emitenteUf} +
+( $F{emitenteCep} != null  ? " - CEP: " + $F{emitenteCep}.substring(0,5) + "-" + $F{emitenteCep}.substring(5,8) : "" )
+ +
+( $F{emitenteTelefone}  != null ? " - Fone/Fax: " + $F{emitenteTelefone} : "" )]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement key="textField-73" mode="Transparent" x="144" y="3" width="210" height="36" uuid="6a182fe0-f448-470e-b6a8-eafa13eacdbe"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{emitenteRazaoSocial}]]></textFieldExpression>
+				</textField>
+				<image hAlign="Left" vAlign="Top" isUsingCache="true">
+					<reportElement key="image-4" mode="Opaque" x="74" y="2" width="66" height="83" uuid="8e06ede0-e7e4-4df5-bf5e-18efb007876b"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+				</image>
+				<textField isBlankWhenNull="false">
+					<reportElement key="textField-76" x="538" y="76" width="230" height="34" uuid="5cade7c6-eb50-48aa-acec-38cc2f3c0990">
+						<printWhenExpression><![CDATA[new Boolean(!($F{codigoTipoEmissao}.equals("2") || $F{codigoTipoEmissao}.equals("5")))]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Consulta de autenticidade no portal nacional da NF-e \nwww.nfe.fazenda.gov.br/portal \nou no site da Sefaz Autorizadora"]]></textFieldExpression>
+				</textField>
+				<componentElement>
+					<reportElement x="531" y="12" width="245" height="37" uuid="161d38df-eef0-4f09-858a-937425d2daf7"/>
+					<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128C" drawText="false" checksumRequired="false" barHeight="90">
+						<jr:codeExpression><![CDATA[$F{chaveAcesso}.substring(3)]]></jr:codeExpression>
+					</jr:barbecue>
+				</componentElement>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="28" splitType="Stretch">
+				<printWhenExpression><![CDATA[$F{valorTotalServicos} != null &&
+Math.signum(Double.parseDouble($F{valorTotalServicos})) == 1 ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				<rectangle radius="1">
+					<reportElement key="rectangle-50" mode="Transparent" x="70" y="8" width="187" height="20" isRemoveLineWhenBlank="true" uuid="f62bc587-0f96-4a3b-9dea-1320a6e1c942">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-56" mode="Transparent" x="74" y="10" width="147" height="8" isRemoveLineWhenBlank="true" uuid="9a88cfc8-d9c6-4a61-8230-84d0b9c40e1f">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[INSCRIÇÃO MUNICIPAL]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-51" mode="Transparent" x="257" y="8" width="174" height="20" isRemoveLineWhenBlank="true" uuid="96a4a583-7863-4869-8e20-50e0b2257f77">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-57" mode="Transparent" x="261" y="10" width="154" height="8" isRemoveLineWhenBlank="true" uuid="a8e733fc-db2a-421c-ab67-678230bbe77b">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[VALOR TOTAL DOS SERVIÇOS]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-52" mode="Transparent" x="431" y="8" width="215" height="20" isRemoveLineWhenBlank="true" uuid="317f40b6-5561-49b1-8245-43d5bd8d1452">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-58" mode="Transparent" x="435" y="10" width="129" height="8" isRemoveLineWhenBlank="true" uuid="25bd23f6-cfca-4b01-9e48-80d904baca94">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[BASE DE CÁLCULO DO ISSQN]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-53" mode="Transparent" x="646" y="8" width="135" height="20" isRemoveLineWhenBlank="true" uuid="762deea1-106c-4f43-96ce-77c1061fe943">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-59" mode="Transparent" x="650" y="10" width="86" height="8" isRemoveLineWhenBlank="true" uuid="bd51b024-23f1-49df-92ad-4080040aa1c2">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[VALOR DO ISSQN]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-55" mode="Transparent" x="74" y="15" width="174" height="12" isRemoveLineWhenBlank="true" uuid="a943df82-4a1e-445c-a4d1-ecc86243eb7c"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inscricaoMunicipal}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-56" mode="Transparent" x="260" y="15" width="164" height="12" isRemoveLineWhenBlank="true" uuid="ab8473eb-639d-4635-a980-f0686b87c168"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valorTotalServicos} != null ? Double.parseDouble($F{valorTotalServicos}) : null]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-57" mode="Transparent" x="436" y="15" width="203" height="12" isRemoveLineWhenBlank="true" uuid="790ab03d-2ad0-4973-9191-b3c5da9c8e9a"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{baseIssqn} != null ? Double.parseDouble($F{baseIssqn}) : null]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-58" mode="Transparent" x="651" y="15" width="124" height="12" isRemoveLineWhenBlank="true" uuid="a0853dc7-289c-4cc7-ab48-a933c253a4e4"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valorIssqn} != null ? Double.parseDouble($F{valorIssqn}) : null]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-60" mode="Transparent" x="72" y="0" width="136" height="10" isRemoveLineWhenBlank="true" uuid="42361086-aabf-45fa-832e-886095579a8e">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font fontName="Arial" size="7" isBold="true" isItalic="false" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[CÁLCULO DO ISSQN]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="Grupo02" isStartNewPage="true" isResetPageNumber="true" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{numeroNfe}]]></groupExpression>
+		<groupHeader>
+			<band height="20" splitType="Stretch">
+				<rectangle radius="1">
+					<reportElement key="rectangle-5" mode="Transparent" x="213" y="0" width="145" height="20" uuid="855c903b-4675-4584-b1b6-b635aa95c713">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-6" mode="Transparent" x="70" y="0" width="143" height="20" uuid="e5393ed2-fe6c-451a-a90b-25aa88e481e0">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-7" mode="Transparent" x="74" y="2" width="78" height="8" uuid="01f78421-e89d-4fc7-9fc3-b9a72c78dd15">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[INSCRIÇÃO ESTADUAL]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-11" mode="Transparent" x="74" y="8" width="133" height="12" uuid="ff5473a7-a70c-4e71-a176-bc82f5aed1b5"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{emitenteInscricaoEstadual}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-8" mode="Transparent" x="216" y="2" width="131" height="8" uuid="b80dfcfd-3ed8-41a7-8127-b5c7c398dbda">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[INSCRIÇÃO ESTADUAL DO SUBST. TRIB. TRIBUTARIO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-12" mode="Transparent" x="216" y="8" width="131" height="12" uuid="b8938170-0d56-4cfb-980f-765f44a73f81"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{emitenteInscricaoEstadualSubtributario}]]></textFieldExpression>
+				</textField>
+				<rectangle radius="1">
+					<reportElement key="rectangle-7" mode="Transparent" x="358" y="0" width="167" height="20" uuid="8f774c46-2381-432b-a170-eedace431c13">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-9" mode="Transparent" x="361" y="2" width="71" height="8" uuid="81099a40-2c9b-4800-afbb-47c6cf52581e">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[CNPJ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-13" mode="Transparent" x="362" y="8" width="157" height="12" uuid="f15e9a0d-57e2-47e5-beff-2a8a39b0a9ac"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{emitenteCnpj} == null ? 
+	""
+: 
+	$F{emitenteCnpj}.length() == 14 ?
+		 $F{emitenteCnpj}.substring(0,2) + "." + $F{emitenteCnpj}.substring(2,5) + "." + $F{emitenteCnpj}.substring(5,8) + "/" + $F{emitenteCnpj}.substring(8,12) + "-" + $F{emitenteCnpj}.substring(12,14) 
+	:
+		 $F{emitenteCnpj}]]></textFieldExpression>
+				</textField>
+				<rectangle radius="1">
+					<reportElement key="rectangle-60" mode="Transparent" x="525" y="0" width="256" height="20" uuid="9f46b342-45f5-4748-8b27-c95f6b64875e">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<textField isBlankWhenNull="false">
+					<reportElement key="textField-74" x="529" y="1" width="250" height="8" uuid="f5c8f2fd-e538-411d-a507-8660e356a3fc"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{codigoTipoEmissao} != null && ( $F{codigoTipoEmissao}.equals("2") || $F{codigoTipoEmissao}.equals("5") ) ? "DADOS DA NF-E" : ($F{numeroRegistroDPEC} != null ? "NÚMERO DE REGISTRO DPEC" : ($F{situacao}.equals("100") ? "PROTOCOLO DE AUTORIZAÇÃO DE USO" :"" ) ) )]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-75" mode="Transparent" x="529" y="8" width="250" height="12" uuid="635c1955-db9e-47b4-95c3-d9a4f6dcffd9"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[( $F{codigoTipoEmissao} != null && ( $F{codigoTipoEmissao}.equals("2") || $F{codigoTipoEmissao}.equals("5") ) ? $F{dadosNfe} : ($F{numeroRegistroDPEC} != null ? $F{numeroRegistroDPEC}+" "+$F{dataRegistroDPEC} : ($F{situacao}.equals("100") ? $F{protocoloDataAutorizacao}  :"" ) ) )]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<group name="Grupo03" isStartNewPage="true" isResetPageNumber="true">
+		<groupExpression><![CDATA[$F{numeroNfe}]]></groupExpression>
+		<groupHeader>
+			<band height="69" splitType="Stretch">
+				<rectangle radius="1">
+					<reportElement key="rectangle-9" mode="Transparent" x="699" y="49" width="82" height="20" uuid="a1e9bc9e-4803-4259-8112-4948746843ab">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-10" mode="Opaque" x="699" y="9" width="82" height="20" backcolor="#DEDEDE" uuid="aba22844-4f4c-441c-9dc4-3b0700f598a5">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-11" mode="Transparent" x="70" y="49" width="379" height="20" uuid="6551031b-9c01-4d39-8594-bdd54a63d5a6">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-12" mode="Transparent" x="449" y="49" width="99" height="20" uuid="dcb2a6fb-5fa2-4c15-a44e-9fd899bcf93e">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-13" mode="Transparent" x="548" y="49" width="27" height="20" uuid="d7266f5a-5d95-4a65-a40f-2820eaef124a">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-14" mode="Transparent" x="631" y="29" width="68" height="20" uuid="73fff145-2bdc-44e6-8ee6-a7ab4a282516">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-15" mode="Transparent" x="416" y="29" width="215" height="20" uuid="2063f390-77b1-4010-8327-b1bfd3040093">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-16" mode="Opaque" x="575" y="9" width="124" height="20" backcolor="#DEDEDE" uuid="3750bca7-321b-41b5-b3b3-38e5639623ef">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-17" mode="Transparent" x="70" y="29" width="346" height="20" uuid="1134d928-22e3-403e-bc70-9ef75d45bd31">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-11" mode="Transparent" x="71" y="0" width="136" height="10" uuid="7fa1d8d1-fb77-44c2-92d7-2d6a681ac80f">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="7" isBold="true" isItalic="false" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[DESTINATÁRIO/REMETENTE]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-18" mode="Opaque" x="70" y="9" width="505" height="20" backcolor="#DEDEDE" uuid="f5ae3787-f292-4093-acac-93ec9c8e9f36">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-12" mode="Transparent" x="74" y="11" width="96" height="8" uuid="1b2b800b-5615-4658-b0cd-7d3ba6ccf28c">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[NOME/RAZÃO SOCIAL]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-15" mode="Transparent" x="75" y="18" width="500" height="12" uuid="48000904-4694-416e-ad56-7da3e51df576"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{destinatarioRazaoSocial}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-13" mode="Transparent" x="580" y="11" width="120" height="8" uuid="0620d493-88f2-4d33-b8c6-527aeb2d478e">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[CNPJ/CPF]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-16" mode="Transparent" x="580" y="18" width="119" height="12" uuid="bfa8bd40-836c-4c24-889b-6ddcfcb22ba0"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{destinatarioCnpj} != null &&  $F{destinatarioCnpj}.length() == 14) ? $F{destinatarioCnpj}.substring(0,2) + "." +
+$F{destinatarioCnpj}.substring(2,5) + "." + $F{destinatarioCnpj}.substring(5,8) + "/" +
+$F{destinatarioCnpj}.substring(8,12) + "-" + $F{destinatarioCnpj}.substring(12,14) : (($F{destinatarioCpf} != null &&  $F{destinatarioCpf}.length() == 11) ? String.format("%s.%s.%s-%s", $F{destinatarioCpf}.substring(0, 3), $F{destinatarioCpf}.substring(3, 6), $F{destinatarioCpf}.substring(6, 9), $F{destinatarioCpf}.substring(9, 11)) : "")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-14" mode="Transparent" x="703" y="11" width="78" height="8" uuid="865fb5bd-0d59-46c1-a1ac-5792e3d6b1e5">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[DATA DA EMISSÃO]]></text>
+				</staticText>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement key="textField-17" mode="Transparent" x="703" y="18" width="78" height="12" uuid="094d0d24-2502-4837-9f92-7ddd7c5aacbc"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dataEmissao} != null ? new SimpleDateFormat("yyyy-MM-dd").parse($F{dataEmissao}) : ""]]></textFieldExpression>
+				</textField>
+				<rectangle radius="1">
+					<reportElement key="rectangle-19" mode="Transparent" x="699" y="29" width="82" height="20" uuid="4d52053a-c9c4-44f1-ae62-aa96ca2d3938">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement key="textField-18" mode="Transparent" x="702" y="38" width="79" height="12" uuid="3b7ef577-e5e4-4060-a45d-ea90de010ff0"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dataSaidaEntrada} != null ? new SimpleDateFormat("yyyy-MM-dd").parse($F{dataSaidaEntrada}) : ""]]></textFieldExpression>
+				</textField>
+				<textField pattern="HH:mm" isBlankWhenNull="true">
+					<reportElement key="textField-19" mode="Transparent" x="703" y="57" width="78" height="12" uuid="fb2e2f7e-4d14-4894-8dc7-7eb6f0f6e879"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{horaSaida} != null ? new SimpleDateFormat("HH:mm:ss").format(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse($F{horaSaida})) : ""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-17" mode="Transparent" x="634" y="31" width="57" height="8" uuid="d9b55f0a-ba58-45ac-ac51-37fef2f7bda2">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[CEP]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-20" mode="Transparent" x="634" y="38" width="63" height="12" uuid="0bf61936-2caf-4718-93bf-d42537aa006c"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{destinatarioCep} != null ? $F{destinatarioCep}.substring( 0, 5 ) + "-" + $F{destinatarioCep}.substring( 5, 8 ) : ""]]></textFieldExpression>
+				</textField>
+				<rectangle radius="1">
+					<reportElement key="rectangle-20" mode="Transparent" x="575" y="49" width="124" height="20" uuid="ed2a214b-857c-4464-aab6-8f2700596455">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-18" mode="Transparent" x="580" y="51" width="106" height="8" uuid="1799dbbf-e3d9-49d4-93fa-1df2f9f5ffc0">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[INSCRIÇÃO ESTADUAL]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-21" mode="Transparent" x="419" y="38" width="211" height="12" uuid="562a37e6-604c-48a9-a832-0df4dc06acfd"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{destinatarioBairro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-19" mode="Transparent" x="420" y="31" width="71" height="8" uuid="87ae8cdd-f774-4f21-bc7d-cf777133a384">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[BAIRRO/DISTRITO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-20" mode="Transparent" x="74" y="31" width="96" height="8" uuid="82657900-c0c4-44ab-b982-e99be1ec8c0c">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[ENDEREÇO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-22" mode="Transparent" x="74" y="38" width="337" height="12" uuid="8dca778d-dd0a-4ebe-9a10-3bffc1676180"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{destinatarioEndereco}
++ ( $F{destinatarioEnderecoNro} == null  ? "" : ", " + $F{destinatarioEnderecoNro} )
++ ( $F{destinatarioCompl} == null ? "" : " - " + $F{destinatarioCompl} )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-21" mode="Transparent" x="74" y="51" width="71" height="8" uuid="d6a58521-feda-4c83-a0f3-4e7064a4c127">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[MUNÍCIPIO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-23" mode="Transparent" x="74" y="57" width="370" height="12" uuid="90d89db5-1cd1-489a-92b6-c7170486c3b3"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{destinatarioMunicipio}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-22" mode="Transparent" x="453" y="51" width="71" height="8" uuid="31b6428a-44fe-4504-abbe-d1d0ff3efe9c">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[FONE/FAX]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-24" mode="Transparent" x="452" y="57" width="98" height="12" uuid="40a7d610-fffd-48ad-b3f3-c7000b5a7805"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{destinatarioFoneFax}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-23" mode="Transparent" x="550" y="51" width="24" height="8" uuid="405ea49f-9e7e-47e0-8225-0e1c0513eb0e">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[UF]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-25" mode="Transparent" x="551" y="57" width="22" height="12" uuid="817ffaf0-cc1a-4918-83c5-1c9ab0d17181"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{destinatarioUf}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-54" mode="Transparent" x="580" y="57" width="119" height="12" uuid="fc740b51-4731-4b25-bf80-9c4f40e62e01"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{destinatarioInscricaoEstadual}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="703" y="31" width="73" height="10" uuid="5a03cf63-b68a-4839-ba7b-b54b4f7b51c2"/>
+					<textElement>
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TipoNF}.equals("0") ? "DATA ENTRADA" : "SAIDA"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="702" y="51" width="74" height="8" uuid="e1fffa50-863f-4d02-b980-50add0a1b2a0"/>
+					<textElement>
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TipoNF}.equals("0") ? "HORA ENTRADA" : "HORA SAIDA"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<group name="Grupo04">
+		<groupExpression><![CDATA[$F{numeroNfe}]]></groupExpression>
+		<groupHeader>
+			<band height="10" splitType="Stretch">
+				<subreport isUsingCache="true">
+					<reportElement key="subreport-1" stretchType="RelativeToBandHeight" mode="Transparent" x="-30" y="0" width="61" height="10" isRemoveLineWhenBlank="true" uuid="c3ef5e65-6376-4248-8614-4602e9ed0de7"/>
+					<subreportParameter name="ImpFrente">
+						<subreportParameterExpression><![CDATA[$P{Frente}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="PreImp">
+						<subreportParameterExpression><![CDATA[$P{PreImpresso}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/NFe/infNFe/cobr//dup")]]></dataSourceExpression>
+					<subreportExpression><![CDATA["danfe_xml_03_paisagem_Sub_Invoice.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<group name="Grupo05">
+		<groupExpression><![CDATA[$F{numeroNfe}]]></groupExpression>
+		<groupHeader>
+			<band height="119" splitType="Stretch">
+				<rectangle radius="1">
+					<reportElement key="rectangle-22" mode="Opaque" x="660" y="29" width="121" height="21" backcolor="#DEDEDE" uuid="0320727d-ea82-4eb0-8f38-e0b4e2c064ec">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-45" mode="Transparent" x="494" y="107" width="139" height="12" uuid="510ff5bc-3838-4b23-9868-0f3a12bfb6ee"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorNumeracao}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.000" isBlankWhenNull="true">
+					<reportElement key="textField-46" mode="Transparent" x="638" y="107" width="70" height="12" uuid="15c32381-74ea-41cb-a4c8-c7e14c633330"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[Double.parseDouble($F{transportadorPesoBruto})]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.000" isBlankWhenNull="true">
+					<reportElement key="textField-47" mode="Transparent" x="712" y="107" width="67" height="12" uuid="16414498-fe48-4f76-ad2e-20da07d3a9c3"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[Double.parseDouble($F{transportadorPesoLiquido})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-49" mode="Transparent" x="74" y="32" width="61" height="8" uuid="8c17db74-c102-4c7b-a9fa-e2b198a867f6">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[VALOR DO FRETE]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-48" mode="Transparent" x="75" y="38" width="103" height="12" uuid="990b9d73-a6f5-417a-bbed-c4f77a0583a0"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valorFrete} == null ? 0.00 : Double.parseDouble($F{valorFrete})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-50" mode="Transparent" x="187" y="32" width="61" height="8" uuid="723e7ca8-b1d9-490e-a894-2c35780a5684">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[VALOR DO SEGURO]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-49" mode="Transparent" x="186" y="38" width="97" height="12" uuid="20a60ee1-5f61-404c-a9c6-7f8eeb112c97"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valorSeguro} == null ? 0.00 : Double.parseDouble($F{valorSeguro})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-51" mode="Transparent" x="293" y="32" width="61" height="8" uuid="f8f90c06-e9dc-4056-ab2d-72f4bcfa40d3">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[DESCONTO]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-50" mode="Transparent" x="294" y="38" width="103" height="12" uuid="b0819dc8-a3af-41e2-aa15-38b4eab82ba7"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{desconto} == null ? 0.00 : Double.parseDouble($F{desconto})]]></textFieldExpression>
+				</textField>
+				<rectangle radius="1">
+					<reportElement key="rectangle-49" mode="Transparent" x="404" y="29" width="136" height="21" uuid="c45bf70c-c92e-4480-b76f-92fe003d621b">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-51" mode="Transparent" x="406" y="38" width="126" height="12" uuid="7eaf50af-c2b9-4ff7-8ded-9fd93859e514"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{outrasDespesas} == null ? 0.00 : Double.parseDouble($F{outrasDespesas})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-52" mode="Transparent" x="407" y="32" width="86" height="8" uuid="5bd88efb-5018-4f7f-ab07-74c9bb23f0b6">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[OUTRAS DESPESAS ACESSÓRIAS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-53" mode="Transparent" x="543" y="32" width="86" height="8" uuid="92b848b5-5821-4cf8-b45e-5eb6a817f022">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[VALOR DO IPI]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-52" mode="Transparent" x="540" y="38" width="112" height="12" uuid="02e663f7-9801-4bff-99de-16417b67ed36"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valorIpi} == null ? 0.00 : Double.parseDouble($F{valorIpi})]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-53" mode="Transparent" x="659" y="38" width="117" height="12" uuid="726840ff-a339-4af0-ac83-78e11e9ca88c"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valorTotalNota} == null ? 0.00 : Double.parseDouble($F{valorTotalNota})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-44" mode="Transparent" x="322" y="107" width="166" height="12" uuid="906347c6-f38e-4e85-9b80-0762a0799c34"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorMarca}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-43" mode="Transparent" x="149" y="107" width="167" height="12" uuid="7662642a-e7b6-444e-9b2b-495bb56e3b83"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorEspecie}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-25" mode="Transparent" x="72" y="1" width="136" height="10" uuid="9cccc7d5-0fc4-4b3c-81d3-d75320229359">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font fontName="Arial" size="7" isBold="true" isItalic="false" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[CÁLCULO DO IMPOSTO]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-30" mode="Opaque" x="70" y="9" width="139" height="20" backcolor="#DEDEDE" uuid="fd1be050-c9ef-446e-97e2-02ba26d41e67">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-26" mode="Transparent" x="74" y="11" width="86" height="8" uuid="f09b730c-0b55-40ca-ae94-5902468bbc9d">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[BASE DE CÁLCULO DO ICMS]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-31" mode="Opaque" x="209" y="9" width="137" height="20" backcolor="#DEDEDE" uuid="5ccf6791-8a43-4d52-aaf3-fbeb74e32f5f">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-27" mode="Transparent" x="214" y="11" width="86" height="8" uuid="5ad2a32a-f1d9-4940-aba6-e80eea569042">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[VALOR DO ICMS]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-32" mode="Transparent" x="346" y="9" width="150" height="20" uuid="ec4df73f-0a7c-429b-b075-8ad64a66c74b">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-28" mode="Transparent" x="349" y="11" width="96" height="8" uuid="6a2238ed-c520-4914-8532-9bea9f98347a">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[BASE DE CÁLCULO DO ICMS ST SUBSTITUIÇÃO]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-33" mode="Transparent" x="496" y="9" width="146" height="20" uuid="b1b07e9f-ee64-435c-865a-25b3e48ec366">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-29" mode="Transparent" x="499" y="11" width="86" height="8" uuid="8bdf5443-6755-4c23-9048-830e65fcb61b">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[VALOR DO ICMS ST SUBSTITUIÇÃO]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-34" mode="Transparent" x="642" y="9" width="139" height="20" uuid="b8df75aa-426d-48ea-b88d-5d9f715be69f">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-30" mode="Transparent" x="645" y="11" width="129" height="8" uuid="ebbe8944-8ed1-4a06-8a9a-8d0d97b08a9a">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[VALOR TOTAL DOS PRODUTOS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-31" mode="Transparent" x="72" y="50" width="184" height="10" uuid="03c8bae2-518c-4658-8a16-61eeb7244c2f">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font fontName="Arial" size="7" isBold="true" isItalic="false" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[TRANSPORTADOR/VOLUMES TRANSPORTADOS]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-35" mode="Transparent" x="70" y="58" width="300" height="20" uuid="c9948fe7-c9f7-421a-8881-08f43f74d1c8">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-32" mode="Transparent" x="74" y="61" width="199" height="8" uuid="c1b1b37b-061f-45a8-be53-3dc1834a4321">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[RAZÃO SOCIAL]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-36" mode="Opaque" x="370" y="58" width="109" height="20" backcolor="#DEDEDE" uuid="7cb1f432-08fe-4041-93a4-1a6ddf3991c3">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-33" mode="Transparent" x="373" y="60" width="63" height="8" uuid="74adbf07-642f-4e84-8443-81af28d9261c">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[FRETE POR CONTA]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-38" mode="Transparent" x="479" y="58" width="106" height="20" uuid="ea996285-35bb-4d1d-a68e-c42fdbc10ef1">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-35" mode="Transparent" x="482" y="60" width="53" height="8" uuid="374bcbc6-73f1-4de7-83b9-a123480696d0">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[CÓDIGO ANTT]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-39" mode="Transparent" x="585" y="58" width="66" height="20" uuid="bd0886bd-7113-4769-a639-d0632dd1739d">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-36" mode="Transparent" x="588" y="60" width="65" height="8" uuid="507542e8-7624-4501-b938-1fb181106757">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[PLACA DO VEÍCULO]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-40" mode="Transparent" x="651" y="58" width="24" height="20" uuid="f347dbe0-b54b-47fe-966b-cee1b6c4b5b8">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-37" mode="Transparent" x="654" y="60" width="20" height="8" uuid="7ea521d1-72bf-44df-8ffd-e3b977d7de78">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[UF]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-38" mode="Transparent" x="680" y="60" width="63" height="8" uuid="c9be6114-89b0-4119-881b-e0ba9f64bc2a">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[CNPJ/CPF]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-39" mode="Transparent" x="74" y="81" width="86" height="8" uuid="9023bd3e-c24f-41bf-87bd-8bfe7cd1b6cb">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[ENDEREÇO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-40" mode="Transparent" x="396" y="81" width="86" height="8" uuid="f569fb82-39e7-41c1-b3af-d3357b827600">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[MUNICÍPIO]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-41" mode="Transparent" x="596" y="78" width="35" height="20" uuid="8cdb6fb0-bdb7-4e3d-a10f-ebb220544393">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-41" mode="Transparent" x="599" y="81" width="24" height="8" uuid="2016a8ad-1863-4f60-8c47-9eb7848ce2ee">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[UF]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-42" mode="Transparent" x="631" y="78" width="150" height="20" uuid="744d067b-9e9c-469e-9977-65b95ae2d302">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-42" mode="Transparent" x="636" y="81" width="95" height="8" uuid="a85bcf0c-c4f0-49dc-8256-40e60fa74f2e">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[INSCRIÇÃO ESTADUAL]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-43" mode="Transparent" x="70" y="98" width="74" height="21" uuid="fbfc6d38-7c6e-403c-8d71-7302033edcce">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-43" mode="Transparent" x="74" y="101" width="53" height="8" uuid="a5832732-6aee-4a81-8ea7-1f860bbc94da">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[QUANTIDADE]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-44" mode="Transparent" x="144" y="98" width="176" height="21" uuid="8ac4eb47-5bce-46ea-962d-f413aeeeedd7">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-44" mode="Transparent" x="149" y="101" width="53" height="8" uuid="6b7eb98b-ef83-4428-8d26-d42e890178f4">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[ESPÉCIE]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-45" mode="Transparent" x="320" y="98" width="173" height="21" uuid="f86ec42c-f4fb-419d-b95c-ee20b60c871a">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-45" mode="Transparent" x="324" y="101" width="53" height="8" uuid="2d46defd-c092-4855-9f8e-f39281387c6e">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[MARCA]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-46" mode="Transparent" x="710" y="98" width="71" height="21" uuid="fd73f1ec-1e4b-4aea-b0a8-d08bd1f8789a">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-46" mode="Transparent" x="714" y="101" width="53" height="8" uuid="cc4fe57a-4afe-4ed2-8e42-d297ab36c14d">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[PESO LÍQUIDO]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-47" mode="Transparent" x="637" y="98" width="73" height="21" uuid="9aa59101-4d7e-4330-95b0-7a69885c0732">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-47" mode="Transparent" x="640" y="101" width="53" height="8" uuid="a43c7fdc-8795-442e-b343-ffdc0091ab1b">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[PESO BRUTO]]></text>
+				</staticText>
+				<rectangle radius="1">
+					<reportElement key="rectangle-48" mode="Transparent" x="493" y="98" width="144" height="21" uuid="5f4ded05-f6aa-49a0-92f2-19b0015e02c6">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-48" mode="Transparent" x="496" y="101" width="117" height="8" uuid="5d36110e-25d1-492c-bf15-b63bf1eb057c">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[NUMERAÇÃO]]></text>
+				</staticText>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-27" mode="Transparent" x="75" y="18" width="130" height="12" uuid="95957e4b-7de2-4755-9d86-1728301104eb"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{baseIcms} == null ? 0.00 : Double.parseDouble($F{baseIcms})]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-28" mode="Transparent" x="213" y="18" width="127" height="12" uuid="4cc0e32b-cc9e-4b72-af6b-8386a4488d1d"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valorIcms} == null ? 0.00 : Double.parseDouble($F{valorIcms})]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-29" mode="Transparent" x="350" y="18" width="138" height="12" uuid="a6ee46a9-54b8-464a-9f89-35daae4db9c8"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{baseIcmsSubstituicao} == null ? 0.00 : Double.parseDouble($F{baseIcmsSubstituicao})]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-30" mode="Transparent" x="498" y="18" width="135" height="12" uuid="081d3bdf-1c24-47fa-8b8e-ee8b79813c03"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valorIcmsSubstituicao} == null ? 0.00 : Double.parseDouble($F{valorIcmsSubstituicao})]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement key="textField-31" mode="Transparent" x="642" y="18" width="134" height="12" uuid="1ddd4095-0fe6-471f-9749-bb27167b3f15"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valorTotalProduto} == null ? 0.00 : Double.parseDouble($F{valorTotalProduto})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-32" mode="Transparent" x="74" y="67" width="296" height="12" uuid="4fe782d6-810b-48e4-aa11-0aea62772091"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorRazaoSocial}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-33" mode="Transparent" x="372" y="67" width="107" height="12" uuid="27a71817-5bdc-47ea-b483-58f68726c1dd"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorFretePorConta}.equals( "0" ) ? "0-EMITENTE" : $F{transportadorFretePorConta}.equals( "1" ) ? "1-DESTINATARIO"
+: $F{transportadorFretePorConta}.equals( "2" ) ? "2-TERCEIRO" : "9-SEM FRETE"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-34" mode="Transparent" x="481" y="67" width="105" height="12" uuid="51aa31fd-da34-46ec-8116-31c60671d3a8"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorCodigoAntt}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-35" mode="Transparent" x="588" y="67" width="64" height="12" uuid="4d68e0b3-4147-4fc3-9199-a772f09d460a"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorPlacaVeiculo}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-36" mode="Transparent" x="654" y="68" width="20" height="12" uuid="baebf680-32e8-47e9-82c6-a0e4ebd6ffae"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorUfVeiculo}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-37" mode="Transparent" x="680" y="67" width="96" height="12" uuid="42aa460d-7c9e-4138-9f4c-a54272af0608"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{transportadorCnpj} != null &&  $F{transportadorCnpj}.length() == 14) ? $F{transportadorCnpj}.substring(0,2) + "." +
+$F{transportadorCnpj}.substring(2,5) + "." + $F{transportadorCnpj}.substring(5,8) + "/" +
+$F{transportadorCnpj}.substring(8,12) + "-" + $F{transportadorCnpj}.substring(12,14) : (($F{transportadorCpf} != null &&  $F{transportadorCpf}.length() == 11) ? String.format("%s.%s.%s-%s", $F{transportadorCpf}.substring(0, 3), $F{transportadorCpf}.substring(3, 6), $F{transportadorCpf}.substring(6, 9), $F{transportadorCpf}.substring(9, 11)) : "")]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-38" mode="Transparent" x="75" y="87" width="316" height="12" uuid="0556762b-1303-4afa-8769-88012eed8c56"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorEndereço}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-39" mode="Transparent" x="397" y="87" width="191" height="12" uuid="59aaa2e1-144d-4d56-858d-1572fb5a63fb"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorMunicipio}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-40" mode="Transparent" x="598" y="87" width="32" height="12" uuid="44ab4e1a-7748-48cd-91b5-bef78b94c3ea"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorUf}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-41" mode="Transparent" x="636" y="87" width="140" height="12" uuid="c21679ad-88e4-4b3a-af00-0a563d5ece05"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorInscricaoEstadual}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="textField-42" mode="Transparent" x="74" y="107" width="66" height="12" uuid="28492b12-d1c0-4b91-a106-9e0016a67c15"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{transportadorQuantidade}]]></textFieldExpression>
+				</textField>
+				<rectangle radius="1">
+					<reportElement key="rectangle-23" mode="Transparent" x="70" y="29" width="112" height="21" uuid="a35f6005-1f73-4b62-a656-c16c2b6c85b6">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-24" mode="Transparent" x="540" y="29" width="120" height="21" uuid="c508384f-3d4a-4878-8406-6e894a46d51b">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-25" mode="Transparent" x="290" y="29" width="114" height="21" uuid="58614394-32f4-408f-b39b-b9567c314f81">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-26" mode="Transparent" x="182" y="29" width="108" height="21" uuid="f57bd12e-98ff-49e9-9f23-4b7b0882f77b">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-27" mode="Transparent" x="391" y="78" width="205" height="20" uuid="c0bca4e5-c223-4683-972b-9e94a58af521">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-28" mode="Transparent" x="70" y="78" width="321" height="20" uuid="fc5ff425-4a8f-4a55-8b57-2c9d89f7adcf">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<rectangle radius="1">
+					<reportElement key="rectangle-29" mode="Transparent" x="675" y="58" width="106" height="20" uuid="b9def77d-0a71-48f7-800d-96be9a1371e8">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="staticText-54" mode="Transparent" x="662" y="32" width="86" height="8" uuid="d7532f9d-71a8-4a45-92fe-b05778fbbf91">
+						<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Arial" size="6" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[VALOR TOTAL DA NOTA]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band splitType="Stretch"/>
+		</groupFooter>
+	</group>
+	<group name="Grupo06">
+		<groupExpression><![CDATA[$F{numeroNfe}]]></groupExpression>
+		<groupHeader>
+			<band height="10">
+				<subreport isUsingCache="true">
+					<reportElement key="subreport-1" mode="Transparent" x="-30" y="0" width="61" height="10" isRemoveLineWhenBlank="true" uuid="eafe37c9-ffea-4acb-a598-a535de24bd51"/>
+					<subreportParameter name="ImpFrente">
+						<subreportParameterExpression><![CDATA[$P{Frente}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="PreImp">
+						<subreportParameterExpression><![CDATA[$P{PreImpresso}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/NFe/infNFe//det")]]></dataSourceExpression>
+					<subreportExpression><![CDATA["danfe_xml_03_paisagem_Sub_Item.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Grupo07">
+		<groupExpression><![CDATA[$F{numeroNfe}]]></groupExpression>
+		<groupHeader>
+			<band splitType="Stretch"/>
+		</groupHeader>
+	</group>
+	<group name="Grupo08" minHeightToStartNewPage="200">
+		<groupExpression><![CDATA[$F{numeroNfe}]]></groupExpression>
+		<groupHeader>
+			<band height="11">
+				<printWhenExpression><![CDATA[$V{InfCompl} != null && $V{InfCompl}.length() >= 941 ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				<subreport isUsingCache="true">
+					<reportElement key="subreport-1" mode="Transparent" x="-30" y="1" width="61" height="10" isRemoveLineWhenBlank="true" uuid="e76e3653-60bf-4b54-b25d-1ceb0e97255e"/>
+					<subreportParameter name="ImpFrente">
+						<subreportParameterExpression><![CDATA[$P{Frente}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="InfCompl">
+						<subreportParameterExpression><![CDATA[$V{InfCompl} != null && $V{InfCompl}.length() >= 941 ? $V{InfCompl}.substring(940) : ""]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="PreImp">
+						<subreportParameterExpression><![CDATA[$P{PreImpresso}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/NFe/infNFe//det")]]></dataSourceExpression>
+					<subreportExpression><![CDATA["danfe_xml_03_paisagem_Sub_InfCompl.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band height="555" splitType="Stretch">
+			<rectangle radius="1">
+				<reportElement key="rectangle-57" mode="Transparent" x="19" y="0" width="20" height="79" uuid="67987d56-a2a8-4acb-8560-04fed91e21e7">
+					<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER}.intValue() == 1 && !($P{PreImpresso}.booleanValue()))]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<rectangle radius="1">
+				<reportElement key="rectangle-56" mode="Transparent" x="39" y="0" width="20" height="456" uuid="18669817-3939-4459-9d40-61f399294705">
+					<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER}.intValue() == 1 && !($P{PreImpresso}.booleanValue()))]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<rectangle radius="1">
+				<reportElement key="rectangle-58" mode="Transparent" x="19" y="79" width="20" height="377" uuid="64a5ca69-47fd-489a-aa42-87e06e51a131">
+					<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER}.intValue() == 1 && !($P{PreImpresso}.booleanValue()))]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-68" x="331" y="4" width="121" height="500" forecolor="#919191" uuid="258c57e6-4b68-480e-8517-8dffc2d5f39d">
+					<printWhenExpression><![CDATA[new Boolean($F{tipoEmissao}.equalsIgnoreCase("Contingência") || $F{tipoEmissao}.equalsIgnoreCase("Contingência FS-DA"))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" rotation="Right">
+					<font fontName="Arial" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Danfe em contingência.
+Impresso em decorrência de problemas técnicos.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-66" x="465" y="10" width="121" height="480" forecolor="#919191" uuid="b0168fea-d0e0-480f-9b8f-b54ab384ba43"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right">
+					<font fontName="Arial" size="30" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{msgVersaoTeste}]]></textFieldExpression>
+			</textField>
+			<line direction="BottomUp">
+				<reportElement key="line-8" positionType="Float" stretchType="RelativeToBandHeight" x="64" y="0" width="2" height="555" isPrintWhenDetailOverflows="true" forecolor="#999999" uuid="327f4fee-e926-499c-a989-4d4fbf3e6f6a">
+					<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement key="staticText-69" x="337" y="6" width="109" height="541" forecolor="#919191" uuid="713929f9-2aa4-4587-a7b5-e58c43bab1cf">
+					<printWhenExpression><![CDATA[new Boolean($F{tipoEmissao}.equalsIgnoreCase("Contingência via DPEC"))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" rotation="Right">
+					<font fontName="Arial" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DANFE impresso em contingência -
+DPEC regularmente recebido pela Receita Federal do Brasil]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-77" x="195" y="10" width="121" height="480" forecolor="#FFCCCC" uuid="31591071-9b1b-410a-866c-17c8f9ef19b8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right">
+					<font fontName="Arial" size="40" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{msgPrevisualizacao}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-66" x="782" y="0" width="10" height="555" forecolor="#919191" uuid="fe998188-c3c5-407e-9a65-49eacbae3377"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="Arial" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Emitido por Teorema Sistemas - www.teorema.inf.br - (42) 3035-4030"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-65" mode="Transparent" x="29" y="2" width="8" height="70" uuid="24690ead-0ab3-4187-8d66-73e729250cdf">
+					<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER}.intValue() == 1 && !($P{PreImpresso}.booleanValue()))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement rotation="Right">
+					<font fontName="Arial" size="4"/>
+				</textElement>
+				<text><![CDATA[DATA DE RECEBIMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-66" mode="Transparent" x="29" y="82" width="9" height="215" uuid="c34635a8-6026-432a-a2ac-4721fea50e8c">
+					<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER}.intValue() == 1 && !($P{PreImpresso}.booleanValue()))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement rotation="Right">
+					<font fontName="Arial" size="4"/>
+				</textElement>
+				<text><![CDATA[IDENTIFICAÇÃO E ASSINATURA DO RECEBEDOR]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-62" mode="Transparent" x="47" y="2" width="11" height="329" uuid="e1b36974-e024-478f-bf3f-be128978fd6d">
+					<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER}.intValue() == 1 && !($P{PreImpresso}.booleanValue()))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement rotation="Right">
+					<font fontName="Arial" size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA["RECEBEMOS DE " + $F{emitenteRazaoSocial} + " OS PRODUTOS/SERVIÇOS CONSTANTES DA NOTA FISCAL INDICADA AO LADO"]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="99" splitType="Stretch">
+			<printWhenExpression><![CDATA[Boolean.valueOf($V{PAGE_NUMBER}.intValue() == 1)]]></printWhenExpression>
+			<rectangle radius="1">
+				<reportElement key="rectangle-54" mode="Transparent" x="70" y="10" width="455" height="89" isRemoveLineWhenBlank="true" uuid="51610341-9e60-40fc-8994-4701ae507c89">
+					<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-62" mode="Transparent" x="74" y="12" width="183" height="8" isRemoveLineWhenBlank="true" uuid="0c68b175-5185-44b0-be9e-b99676dbd82f">
+					<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[INFORMAÇÕES COMPLEMENTARES]]></text>
+			</staticText>
+			<rectangle radius="1">
+				<reportElement key="rectangle-55" mode="Transparent" x="525" y="10" width="256" height="89" isRemoveLineWhenBlank="true" uuid="e7b9aee2-a579-44e2-b6a1-e9efda338739">
+					<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-63" mode="Transparent" x="532" y="12" width="182" height="8" isRemoveLineWhenBlank="true" uuid="c212b708-8ca4-4c57-944b-ffcd14c53b96">
+					<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="6" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[RESERVADO AO FISCO]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField-59" mode="Transparent" x="74" y="19" width="450" height="78" isRemoveLineWhenBlank="true" uuid="66080ef7-a2ba-4b59-8acc-c504ac973016"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="Monospaced" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{InfCompl} != null && $V{InfCompl}.length() > 940 ? $V{InfCompl}.substring(0, 940) : $V{InfCompl}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="1">
+				<reportElement key="rectangle-59" mode="Transparent" x="19" y="0" width="40" height="99" isRemoveLineWhenBlank="true" uuid="13f10fcf-08de-4add-b86e-71442562b217">
+					<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-67" mode="Transparent" x="43" y="1" width="15" height="96" isRemoveLineWhenBlank="true" uuid="0e6f4c84-7ea5-414f-9865-20652087b29e">
+					<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NF-e]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-63" mode="Transparent" x="34" y="1" width="12" height="96" isRemoveLineWhenBlank="true" uuid="a91d0e2d-3cc5-4963-ba66-0af3217e6c1f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nº" + $F{numeroNfe}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-64" mode="Transparent" x="22" y="1" width="12" height="96" isRemoveLineWhenBlank="true" uuid="0f444006-a2db-4bdf-9337-5ffe659b8958"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Série: " + $F{serieNfe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-64" mode="Transparent" x="72" y="1" width="136" height="10" isRemoveLineWhenBlank="true" uuid="d87e234d-1326-43fc-9c9f-81e47d46d457">
+					<printWhenExpression><![CDATA[Boolean.valueOf(!$P{PreImpresso}.booleanValue())]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial" size="7" isBold="true" isItalic="false" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[DADOS ADICIONAIS]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
